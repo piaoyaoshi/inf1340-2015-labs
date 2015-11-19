@@ -26,7 +26,7 @@ TOTAL_SALES_MULTIPLIER = 1 + TOTAL_TAX_RATE
 
 def bill_of_sale(purchase):
 
-    f = open('output.txt', 'w')
+    f = open('sales_report.txt', 'w')
     f.write("Amount of purchase: {0:.2f}\n".format(purchase))
     f.write("Provincial tax: {0:.2f}\n".format(purchase * PROVINCIAL_SALES_TAX_RATE))
     f.write("Federal tax: {0:.2f}\n".format(purchase * FEDERAL_SALES_TAX_RATE))
@@ -35,5 +35,5 @@ def bill_of_sale(purchase):
     f.close()
 
 if __name__ == '__main__':
-    bill_of_sale(89)
+    bill_of_sale(100)
 
