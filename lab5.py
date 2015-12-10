@@ -76,10 +76,11 @@ class NameThatShapeGUI:
         val = self.side_entry.get()
         try:
             shape_name = name_that_shape(val)
+            self.value.set(shape_name)
         except:
-            shape_name = 'ERROR'
-        self.value.set(shape_name)
-        tkMessageBox.showinfo("Response", shape_name)
+            self.value.set("")
+            shape_name = 'Invalid input'
+            tkMessageBox.showinfo("Response", shape_name)
 
 
 # Instantiating the object
